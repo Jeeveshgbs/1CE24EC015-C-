@@ -1,5 +1,5 @@
 #include<iostream>
-use namespace std;
+using namespace std;
 
 class Circle
 {
@@ -16,7 +16,7 @@ public:
 int main()
 {
    Circle c;
-   c.setradius(23);
+   c.setRadius(23.7);
    c.area();
    return 0;
 }
