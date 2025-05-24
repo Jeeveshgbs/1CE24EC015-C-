@@ -39,7 +39,7 @@ int main()
         cin>>pancard;
         cout<<"Enter the adhar"<<i+1<<":"<<endl;
         cin>>adharcard;
-        list_of_user.push_back(Person(name,pancard,adharcard));
+        list_of_user.push_back(Person(name,pancard));
     }
 
     for(Person user:list_of_user)
