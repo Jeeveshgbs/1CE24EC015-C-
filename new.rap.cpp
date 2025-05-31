@@ -1,30 +1,30 @@
 #include<iostream>
 using namespace std;
 
-// Function: x² - 2 (we want to find where this equals 0, which gives us √2)
+// Function: x^3- x - 1 
 float f(float x) {
-    return x*x - 2;
+    return x*x*x - x - 1;
 }
 
-// Derivative: 2x
+// Derivative: 3x^2 - 1
 float f_derivative(float x) {
-    return 2*x;
+    return 3*x*x - 1;
 }
 
 int main() {
-    float x = 1.5;  // Starting guess
+    float x = 1.5;  
     
     cout << "Finding square root of 2 using Newton's method" << endl;
     cout << "Starting with guess: " << x << endl << endl;
     
-    // Do Newton's method 4 times
-    for(int i = 1; i <= 4; i++) {
-        // Newton's formula: new_x = old_x - f(x)/f'(x)
+    
+    for(int i = 1; i <= 3; i++) {
+        
         float new_x = x - f(x)/f_derivative(x);
         
         cout << "Step " << i << ": " << new_x << endl;
         
-        x = new_x;  // Update x for next step
+        x = new_x;  
     }
     
     cout << endl << "Final answer: " << x << endl;
